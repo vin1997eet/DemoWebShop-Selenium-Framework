@@ -1,0 +1,24 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="DemoWebShop Suite">
+
+    <!-- Listeners -->
+   
+
+    <!-- Test Block -->
+    <test name="Test Cases">
+
+        <!-- Parameters -->
+        
+
+        <!-- Groups -->
+       
+
+        <!-- Classes -->
+        <classes>
+            <class name="tests.LoginTest"/>
+            
+        </classes>
+    </test>
+
+</suite>
