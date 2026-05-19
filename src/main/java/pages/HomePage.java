@@ -22,14 +22,76 @@ public class HomePage
 	{
 		if(driver.findElement(excellentRadio).isDisplayed())
 		{
+			System.out.println("Excellent Radio Button is Present");
 			return true;
 		}
 		else
 		{
+			System.out.println("Excellent Radio Button is not Present");
+			return false;
+		}
+	}
+	public boolean verifyGoodRadio()
+	{
+		
+		if(driver.findElement(goodRadio).isDisplayed())
+		{
+			System.out.println("Good Radio Button is Present");
+			return true;
+		}
+		else
+		{
+			System.out.println("Good Radio Button is not Present");
 			return false;
 		}
 	}
 	
+	public boolean verifyPoorRadio()
+	{
+		if(driver.findElement(poorRadio).isDisplayed())
+		{
+			System.out.println("poor Radio Button is Present");
+			return true;
+		}
+		else
+		{
+			System.out.println("poor Radio Button is not Present");
+			return false;
+		}
+	}
+	
+	public boolean verifyVeryBadRadio()
+	{
+		if(driver.findElement(veryBadRadio).isDisplayed())
+		{
+			System.out.println("veryBad Radio Button is Present");
+			return true;
+		}
+		else
+		{
+			System.out.println("veryBad Radio Button is not Present");
+			return false;
+		}
+	}
+	
+	public void clickVeryExcellentRadioButton()
+	{
+		driver.findElement(excellentRadio).click();
+	}
+	
+	public void clickGoodRadioButton()
+	{
+		driver.findElement(goodRadio).click();
+	}
+	
+	public void clickPoorRadioButton()
+	{
+		driver.findElement(poorRadio).click();
+	}
+	public void clickVeryBadRadioButton()
+	{
+		driver.findElement(veryBadRadio).click();
+	}
 	
 	
 	
