@@ -1,25 +1,35 @@
 package pages;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import dev.failsafe.internal.util.Durations;
 
 public class HomePage 
 {
 
 	WebDriver driver;
+	WebDriverWait wait;
 	public HomePage(WebDriver driver)
 	{
 		this.driver=driver;
+		wait=new WebDriverWait(driver,Duration.ofSeconds(50000));
 		
 	}
 	
-	By excellentRadio=By.name("pollanswers-1");
-	By goodRadio=By.name("pollanswers-2");
-	By poorRadio=By.name("pollanswers-3");
-	By veryBadRadio=By.name("pollanswers-4");
+	By excellentRadio=By.id("pollanswers-1");
+	By goodRadio=By.id("pollanswers-2");
+	By poorRadio=By.id("pollanswers-3");
+	By veryBadRadio=By.id("pollanswers-4");
+	
 	
 	public boolean verifyExcellentRadio()
 	{
+	//	wait.until(ExpectedConditions.visibilityOfElementLocated(excellentRadio));
 		if(driver.findElement(excellentRadio).isDisplayed())
 		{
 			System.out.println("Excellent Radio Button is Present");

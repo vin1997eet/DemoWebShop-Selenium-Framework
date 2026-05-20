@@ -16,7 +16,7 @@
 
         <!-- Classes -->
         <classes>
-        <class name="test.HomeTest"/>
+        <class name="tests.HomeTest"/>
             <class name="tests.LoginTest"/>
             
         </classes>
